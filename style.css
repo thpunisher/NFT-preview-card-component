@@ -40,8 +40,43 @@ body{
     align-items: center;
 }
 
+.image{
+    position: relative;
+    width: auto;
+}
+
 img:first-of-type{
     border-radius: 8px;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.view{
+    border-radius: 8px;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 255, 247, 0.3);
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+  }
+
+.image:hover .equill{
+    opacity: .3 ;
+}
+
+.image:hover .view{
+    opacity: 1;
 }
 
 .texts{
@@ -53,8 +88,11 @@ img:first-of-type{
 .title{
     font-weight: 600;
     font-size: 1.5rem;
+    cursor: pointer;
 }
-
+.title:hover{
+    color:hsl(178, 100%, 50%);
+}
 .paragraph{
     margin-top: 10px;
     font-weight: 300;
@@ -111,6 +149,10 @@ img:first-of-type{
 .author a{
     color: white;
     text-decoration: none;
+}
+
+.author a:hover{
+    color: hsl(178, 100%, 50%);
 }
 
 @media screen and (min-width:600px) {
